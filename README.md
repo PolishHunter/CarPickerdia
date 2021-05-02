@@ -59,6 +59,8 @@ High priority
 
 12. As a user, I want to have a search field so that I can type in the name of the specific car brand.
 
+13. As a user, I want to be able to get a car suggestion according to the car's priority.
+
 Medium priority
 
 1.	As a user I want to see in which country a certain car was manufactured, so that it might be easier to search for it in the future.
