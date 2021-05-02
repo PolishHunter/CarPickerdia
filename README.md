@@ -61,11 +61,9 @@ Medium priority
 
 3.	As a user, I want to be able to ask questions in the message sent to the administration, so that they could response faster than at the app store.
 
-4.	As a user, I want to make sure that the following app is not a scam, so that I want to be ascertain that it is fully legit.
+4.	As a user, I want to be able to share my results with the other users, so that they could notify me if the app picked the right cars for me.
 
-5.	As a user, I want to be able to share my results with the other users, so that they could notify me if the app picked the right cars for me.
-
-6.	As a user, I want to have an option to compare two cars together, so that it might be easier for me to decide which one I should go for.
+5.	As a user, I want to have an option to compare two cars together, so that it might be easier for me to decide which one I should go for.
 
 Low priority
 
