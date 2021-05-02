@@ -43,48 +43,30 @@ High priority
 
 4.	As a user, I want to have a text form where I express my feelings regarding the app and send it to the administration.
 
-5.	As a user, I want to have an option to print out the results, so that I can have a physical copy as well.
+5.	As a user, I want to have an option to save the results, so that I can use them in the future.
 
 6.	As a user, I want to be able to see the name of the car, production year and some of the other crucial specification, so that I know which one to afford.
 
-7.	As a user, I want to have a page refresh option, so that I can receive some different car proposals.
+7.	As a user, I want to have a try again option, so that I can receive some different car proposals.
 
 8.	As a user, I want to have an option to download the picture of the car, so that I can search for it through Google Graphics.
 
 9.	 As a user, I want to have a directory where I could store all the car proposals previously done, so that I can go back and compare with the other results.
 
-10.	 As an administrator, I want to be able to edit the car descriptions if they are missing any crucial information.
-
-11.	 As an administrator, I want to have a general information section where I could notify the users about the upcoming updates.
-
-12.	 As an administrator, I want to see the ratings given by the users as well as some comments, so I will keep the app updated.
-
 Medium priority
 
 1.	As a user I want to see in which country a certain car was manufactured, so that it might be easier to search for it in the future.
 
-2.	As a user I want to have an insight option where I can view the performance of all the best car options chosen by the algorithm.
+2.	As a user, I want to have a report option if the car proposal generator is not functioning appropriately, so that the admin might think of the potential fixes.
 
-3.	As a user, I want to have a report option if the car proposal generator is not functioning appropriately, so that the admin might think of the potential fixes.
+3.	As a user, I want to be able to ask questions in the message sent to the administration, so that they could response faster than at the app store.
 
-4.	As a user, I want to be able to ask questions in the message sent to the administration, so that they could response faster than at the app store.
+4.	As a user, I want to make sure that the following app is not a scam, so that I want to be ascertain that it is fully legit.
 
-5.	As a user, I want to make sure that the following app is not a scam, so that I want to be ascertain that it is fully legit.
+5.	As a user, I want to be able to share my results with the other users, so that they could notify me if the app picked the right cars for me.
 
-6.	As a user, I want to be able to share my results with the other users, so that they could notify me if the app picked the right cars for me.
-
-7.	As a user, I want to have an option to compare two cars together, so that it might be easier for me to decide which one I should go for.
-
-8.	As an administrator, I want to see the statistics how many people are using the app, so that I can think of later updates to get more users.
-
-9.	As an administrator, I want to receive the rating from the users regarding the helpfulness of this app.
-
-10.	As an administrator, I want to get the comments regarding the app, so that I am going to know what could be enhanced in the future.
-
-11.	 As an administrator, I want to respond to the comments written by the users, so that they may receive the answers regarding the issue they have.
+6.	As a user, I want to have an option to compare two cars together, so that it might be easier for me to decide which one I should go for.
 
 Low priority
 
 1.	As a user, I want to have an option to get to the car brand’s official website, so that I can see their new models as well.
-
-2.	As a user, I want to be able to switch between the themes - light/dark, so that it is more convenient for me to search for the cars at night.
