@@ -53,6 +53,12 @@ High priority
 
 9.	 As a user, I want to have a directory where I could store all the car proposals previously done, so that I can go back and compare with the other results.
 
+10. As a user, I want to have a suggest button in the search view, so that I can get a visual representation of the car as an image. 
+
+11. As a user, I want to get the name of the manufacturer displayed over the image, so that I know what cars I am going to search for.
+
+12. As a user, I want to have a search field so that I can type in the name of the specific car brand.
+
 Medium priority
 
 1.	As a user I want to see in which country a certain car was manufactured, so that it might be easier to search for it in the future.
