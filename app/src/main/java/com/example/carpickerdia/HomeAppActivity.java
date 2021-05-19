@@ -19,13 +19,13 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.bumptech.glide.Glide;
-import com.example.carpickerdia.viewmodels.mainapp.HomeAppActivityViewModel;
+import com.example.carpickerdia.viewmodels.mainapp.LoginViewModel;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeAppActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private HomeAppActivityViewModel viewModel;
+    private LoginViewModel viewModel;
     private NavigationView navigationView;
 
     private View view;
@@ -33,7 +33,7 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(HomeAppActivityViewModel.class);
+        viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
         setContentView(R.layout.activity_home_app);
         prepareToolbar();
         setNavigationViewListener();
@@ -74,7 +74,7 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
             if (user != null) {
                 setNavigationHeader();
             } else {
-                startActivity(new Intent(this, HomeAppActivityViewModel.class));
+                startActivity(new Intent(this, LoginViewModel.class));
             }
         });
     }

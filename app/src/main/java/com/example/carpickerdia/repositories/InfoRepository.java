@@ -161,7 +161,7 @@ public class InfoRepository {
         });
     }
 
-    public void getAllCarModels() {
+    public void getAllCarModels(String make) {
         CarApi carApi = ServiceGenerator.getCarApi();
         Call<List<CarResponse>> call = carApi.getCar();
         call.enqueue(new Callback<List<CarResponse>>() {
@@ -173,11 +173,11 @@ public class InfoRepository {
                     List<String> models = new ArrayList<>();
 
                     for(CarResponse car: carResponse) {
-                        if(!models.contains(car.getCar().getModel())) {
+                        if(make.equals(car.getCar().getMake())) {
                             models.add(car.getCar().getModel());
                         }
-                    }
-                    allBrands.setValue(models);
+                    }  System.out.println("Car Model" + models.size());
+                    allModels.setValue(models);
                 }
             }
 

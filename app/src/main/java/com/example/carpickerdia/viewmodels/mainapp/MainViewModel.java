@@ -7,14 +7,14 @@ import com.example.carpickerdia.repositories.InfoRepository;
 
 import java.util.List;
 
-public class ExpertViewModel extends ViewModel {
+public class MainViewModel extends ViewModel {
     InfoRepository infoRepository;
 
-    public ExpertViewModel() {
+    public MainViewModel() {
         this.infoRepository = InfoRepository.getInstance();
     }
 
-    public LiveData<List<String>> getAllBrands() {
-        return infoRepository.getAllBrands();
+    public void getAllBrands() {
+        infoRepository.getAllCarBrands();
     }
 }

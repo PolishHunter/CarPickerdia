@@ -44,9 +44,7 @@ public class ExpertSpecificModelFragment extends Fragment {
     }
 
     private void prepareOnClickEvents(){
-        viewModel.getAllModels().observe(getViewLifecycleOwner(), model -> {
 
-        });
     }
 
     private void loadCarImage(String model) {

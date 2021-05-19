@@ -17,8 +17,4 @@ public class SpecificCarViewModel extends ViewModel {
     public LiveData<List<String>> getAllModels() {
         return infoRepository.getAllModels();
     }
-
-    public void getAllCarModels() {
-        infoRepository.getAllCarModels();
-    }
 }

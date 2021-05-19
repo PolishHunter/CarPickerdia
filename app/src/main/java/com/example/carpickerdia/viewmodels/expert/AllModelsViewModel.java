@@ -18,7 +18,7 @@ public class AllModelsViewModel extends ViewModel {
         return infoRepository.getAllModels();
     }
 
-    public void getAllCarModels() {
-        infoRepository.getAllCarModels();
+    public void getAllCarModels(String make) {
+        infoRepository.getAllCarModels(make);
     }
 }

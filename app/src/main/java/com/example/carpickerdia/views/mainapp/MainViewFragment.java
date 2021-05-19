@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.example.carpickerdia.R;
-import com.example.carpickerdia.viewmodels.mainapp.ExpertViewModel;
+import com.example.carpickerdia.viewmodels.mainapp.MainViewModel;
 
 public class MainViewFragment extends Fragment {
 
@@ -20,13 +20,13 @@ public class MainViewFragment extends Fragment {
     private Button buttonCasual;
     private Button buttonExpert;
 
-    private ExpertViewModel viewModel;
+    private MainViewModel viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        viewModel = new ViewModelProvider(this).get(ExpertViewModel.class);
+        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         view = inflater.inflate(R.layout.fragment_main_view, container, false);
 

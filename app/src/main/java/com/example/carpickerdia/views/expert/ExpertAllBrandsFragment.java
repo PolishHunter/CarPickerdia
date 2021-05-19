@@ -23,7 +23,7 @@ import com.example.carpickerdia.viewmodels.expert.AllBrandsViewModel;
 
 public class ExpertAllBrandsFragment extends Fragment implements CarAdapterBrand.OnListItemClickListener {
 
-    private RecyclerView carList;
+    private RecyclerView brandList;
     private CarAdapterBrand adapter;
     private View view;
     private AllBrandsViewModel viewModel;
@@ -39,18 +39,21 @@ public class ExpertAllBrandsFragment extends Fragment implements CarAdapterBrand
     }
 
     private void loadData() {
-       carList = view.findViewById(R.id.expert_car_brand_list);
-       viewModel.getAllBrands().observe(getViewLifecycleOwner(), brands -> {
-           adapter.setBrandList(brands);
-       });
-       carList.hasFixedSize();
-       carList.setLayoutManager(new LinearLayoutManager(view.getContext()));
-       carList.setAdapter(adapter);
+        adapter = new CarAdapterBrand(this);
+        brandList = view.findViewById(R.id.expert_car_brand_list);
+        brandList.hasFixedSize();
+        brandList.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        viewModel.getAllBrands().observe(getViewLifecycleOwner(), brands -> {
+            adapter.setBrandList(brands);
+        });
+        brandList.setAdapter(adapter);
     }
 
     @Override
     public void onListItemClick(int brandId) {
-        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_brands_to_nav_expert_all_models);
+        Bundle bundle = new Bundle();
+        bundle.putString(adapter.getBrand(brandId), "");
+        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_brands_to_nav_expert_all_models, bundle);
     }
 
 //    public boolean onCreateOptionsMenu(Menu menu) {

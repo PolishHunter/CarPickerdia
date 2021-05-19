@@ -1,6 +1,5 @@
 package com.example.carpickerdia.adapters;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,44 +25,35 @@ import java.util.List;
 public class CarAdapterBrand extends RecyclerView.Adapter<CarAdapterBrand.ViewHolder> implements Filterable {
 
     private List<String> brandList;
-    private List<Car> carList;
-    private List<Car> carListFull;
     final private OnListItemClickListener mOnListItemClickListener;
-    private Activity activity;
 
-    CarAdapterBrand(List<String> brandList, List<Car> carList, OnListItemClickListener listener, Activity activity){
-        this.brandList = brandList;
-        this.carList = carList;
-        carListFull = new ArrayList<>(carList);
+    public CarAdapterBrand(OnListItemClickListener listener){
         mOnListItemClickListener = listener;
-        this.activity = activity;
+        brandList = new ArrayList<>();
     }
 
     public void setBrandList(List<String> brandList) {
        this.brandList = brandList;
+       notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.fragment_expert_all_brands, parent, false);
+        View view = inflater.inflate(R.layout.row_car_brand, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        loadCarImage(viewHolder.imageView, carList.get(position).getMake());
-        viewHolder.button.setOnClickListener(v->{
-            Bundle bundle = new Bundle();
-            bundle.putString("make", carList.get(position).getMake());
-            Navigation.findNavController(viewHolder.itemView).navigate(R.id.action_nav_expert_all_brands_to_nav_expert_all_models,bundle);
-        });
+        loadCarImage(viewHolder.imageView, brandList.get(position));
+        viewHolder.textView.setText(brandList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return carList.size();
+        return brandList.size();
     }
 
     @Override
@@ -74,15 +64,15 @@ public class CarAdapterBrand extends RecyclerView.Adapter<CarAdapterBrand.ViewHo
     private Filter carFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            List<Car> filteredList = new ArrayList<>();
+            List<String> filteredList = new ArrayList<>();
 
             if(constraint ==  null || constraint.length() == 0) {
-                filteredList.addAll(carListFull);
+                filteredList.addAll(brandList);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
-                for (Car item : carListFull) {
-                    if(item.getMake().toLowerCase().contains(filterPattern)) {
+                for (String item : brandList) {
+                    if(item.toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }
                 }
@@ -95,17 +85,20 @@ public class CarAdapterBrand extends RecyclerView.Adapter<CarAdapterBrand.ViewHo
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            carList.clear();
-            carList.addAll((List) results.values);
+            brandList.clear();
+            brandList.addAll((List) results.values);
             notifyDataSetChanged();
         }
     };
+
+    public String getBrand(int index) {
+        return brandList.get(index);
+    }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView textView;
         ImageView imageView;
-        Button button;
         SearchView searchView;
 
         ViewHolder(View itemView) {
@@ -130,163 +123,163 @@ public class CarAdapterBrand extends RecyclerView.Adapter<CarAdapterBrand.ViewHo
     private void loadCarImage(ImageView imageView, String make){
         switch (make){
             case "acura":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.acura));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.acuralogo));
                 break;
 
             case "alfa-romeo":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.alfa));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.alfalogo));
                 break;
 
             case "aston-martin":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.aston));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.astonlogo));
                 break;
 
             case "audi":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.audi));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.audilogo));
                 break;
 
             case "bentley":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.bentley));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.bentleylogo));
                 break;
 
             case "bmw":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.bmw));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.bmwlogo));
                 break;
 
             case "buick":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.buick));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.buicklogo));
                 break;
 
             case "cadillac":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.cadillac));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.cadillaclogo));
                 break;
 
             case "chrysler":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.chrysler));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.chryslerlogo));
                 break;
 
             case "chevrolet":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.chevrolet));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.chevroletlogo));
                 break;
 
             case "dodge":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.dodge));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.dodgelogo));
                 break;
 
             case "ferrari":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ferrari));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.ferrarilogo));
                 break;
 
             case "fiat":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fiat));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.fiatlogo));
                 break;
 
             case "ford":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ford));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.fordlogo));
                 break;
 
             case "gmc":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.gmc));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.gmclogo));
                 break;
 
             case "honda":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.honda));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.hondalogo));
                 break;
 
             case "hyundai":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.hyundai));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.hyundailogo));
                 break;
 
             case "infiniti":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.infiniti));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.infinitilogo));
                 break;
 
             case "jaguar":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.jaguar));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.jaguarlogo));
                 break;
 
             case "jeep":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.jeep));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.jeeplogo));
                 break;
 
             case "kia":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.kia));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.kialogo));
                 break;
 
             case "lamborghini":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.lamborghini));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.lamborghinilogo));
                 break;
 
             case "land-rover":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.land));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.landroverlogo));
                 break;
 
             case "lexus":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.lexus));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.lexuslogo));
                 break;
 
             case "lincoln":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.lincoln));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.lincolnlogo));
                 break;
 
             case "maserati":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.maserati));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.maseratilogo));
                 break;
 
             case "mazda":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.mazda));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.mazdalogo));
                 break;
 
             case "mclaren":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.mclaren));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.mclarenlogo));
                 break;
 
             case "mercedes-benz":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.mercedes));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.mercedeslogo));
                 break;
 
             case "mini":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.mini));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.minilogo));
                 break;
 
             case "mitsubishi":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.mitsubishi));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.mitsubishilogo));
                 break;
 
             case "nissan":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.nissan));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.nissanlogo));
                 break;
 
             case "porsche":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.porsche));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.porschelogo));
                 break;
 
             case "ram":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ram));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.ramlogo));
                 break;
 
             case "rolls-royce":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.rolls));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.rollsroycelogo));
                 break;
 
             case "scion":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.scion));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.scionlogo));
                 break;
 
             case "subaru":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.subaru));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.subarulogo));
                 break;
 
             case "toyota":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.toyota));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.toyotalogo));
                 break;
 
             case "volkswagen":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.volkswagen));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.volkswagenlogo));
                 break;
 
             case "volvo":
-                imageView.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.volvo));
+                imageView.setImageDrawable(ContextCompat.getDrawable(imageView.getContext(), R.drawable.volvologo));
                 break;
         }
     }

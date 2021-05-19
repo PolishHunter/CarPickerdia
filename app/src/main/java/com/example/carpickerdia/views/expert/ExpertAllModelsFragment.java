@@ -24,7 +24,7 @@ import com.example.carpickerdia.viewmodels.expert.AllModelsViewModel;
 
 public class ExpertAllModelsFragment extends Fragment implements CarAdapterModel.OnListItemClickListener {
 
-    private RecyclerView carList;
+    private RecyclerView modelList;
     private CarAdapterModel adapter;
     private View view;
     private AllModelsViewModel viewModel;
@@ -40,19 +40,23 @@ public class ExpertAllModelsFragment extends Fragment implements CarAdapterModel
     }
 
     private void loadData() {
-        carList = view.findViewById(R.id.expert_car_model_list);
+        adapter = new CarAdapterModel(this);
+        modelList = view.findViewById(R.id.expert_car_model_list);
+        modelList.hasFixedSize();
+        modelList.setLayoutManager(new LinearLayoutManager(view.getContext()));
         viewModel.getAllModels().observe(getViewLifecycleOwner(), models -> {
             adapter.setModelList(models);
+            System.out.println("Car Model" + models.size());
         });
-        carList.hasFixedSize();
-        carList.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        carList.setAdapter(adapter);
+        modelList.setAdapter(adapter);
+        System.out.println();
     }
 
     @Override
     public void onListItemClick(int modelId) {
-        viewModel.getAllModels();
-        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_models_to_nav_expert_reliable);
+        Bundle bundle = new Bundle();
+        bundle.putString(adapter.getModel(modelId), "");
+        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_models_to_nav_expert_specific_model, bundle);
     }
 
 //    public boolean onCreateOptionsMenu(Menu menu) {

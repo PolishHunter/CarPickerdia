@@ -14,7 +14,7 @@ public class LoginViewModel extends AndroidViewModel {
 
     private UserRepository userRepository;
 
-    public LoginViewModel(@NonNull Application application) {
+    public LoginViewModel(Application application) {
         super(application);
         userRepository = UserRepository.getInstance(application);
     }
@@ -26,5 +26,9 @@ public class LoginViewModel extends AndroidViewModel {
     public UserStatusLiveData getStatus(){
         String userId = userRepository.getCurrentUser().getValue().getUid();
         return userRepository.getStatus(userId);
+    }
+
+    public void signOut() {
+        userRepository.signOut();
     }
 }

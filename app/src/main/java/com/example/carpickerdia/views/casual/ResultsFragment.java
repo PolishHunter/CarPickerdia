@@ -87,8 +87,12 @@ public class ResultsFragment extends Fragment {
                         + "Price: " + "\n" + randomCars.get(2).getPrice() + "$";
                 textView3.setText(label3);
                 loadCarImages(imageView3, randomCars.get(2).getModel());
-//                textView3.setVisibility(View.GONE);
-//                imageView3.setVisibility(View.GONE);
+                textView3.setVisibility(View.VISIBLE);
+                imageView3.setVisibility(View.VISIBLE);
+            }
+            else {
+                textView3.setVisibility(View.GONE);
+                imageView3.setVisibility(View.GONE);
             }
 
             if(randomCars.size() > 3) {
@@ -99,9 +103,14 @@ public class ResultsFragment extends Fragment {
                         + "Price: " + "\n" + randomCars.get(3).getPrice() + "$";
                 textView4.setText(label4);
                 loadCarImages(imageView4, randomCars.get(3).getModel());
-//                textView4.setVisibility(View.GONE);
-//                imageView4.setVisibility(View.GONE);
+                textView4.setVisibility(View.VISIBLE);
+                imageView4.setVisibility(View.VISIBLE);
             }
+            else {
+                textView4.setVisibility(View.GONE);
+                imageView4.setVisibility(View.GONE);
+            }
+
 
             textView1.setText(label1);
             textView2.setText(label2);
