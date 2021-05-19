@@ -24,6 +24,7 @@ Delimitation
 -	To make it visible and compact enough, only 4 cars are going to be shown,
 -	Based on a certain type of the car, rather than the keywords from the description provided by the user,
 -	Suggestions about the potential cars only, 
+-	No filtering through the country,
 -	It is rather an electronic encyclopedia than online shop.
 
 
