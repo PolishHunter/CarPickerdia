@@ -13,17 +13,14 @@ Problem statement
 Since, many people are hesitating for which car they should go for, a car picking app will help them to get the best possible displayed according to their needs.
 
 
-
 Definition of purpose
 
 The purpose is to make a car picking application that will be displaying the best possible car options according to the user’s needs based on the different expert opinions, origin, the ratio between quality of materials and price in order to allow the users to buy the right one in the future that will satisfy them enough.
 
 Delimitation
 
--	Focused on the local database only (car APIs cost money),
 -	Mobile version for Android only,
 -	No payment options,
--	Certain price/year range only,
 -	To make it visible and compact enough, only 4 cars are going to be shown,
 -	Based on a certain type of the car, rather than the keywords from the description provided by the user,
 -	Suggestions about the potential cars only, 
