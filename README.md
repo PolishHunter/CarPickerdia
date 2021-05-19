@@ -40,8 +40,6 @@ High priority
 
 4.	As a user, I want to have a text form where I express my feelings regarding the app and send it to the administration.
 
-5.	As a user, I want to have an option to save the results, so that I can use them in the future.
-
 6.	As a user, I want to be able to see the name of the car, production year and some of the other crucial specification, so that I know which one to afford.
 
 7.	As a user, I want to have a try again option, so that I can receive some different car proposals.
