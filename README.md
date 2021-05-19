@@ -68,6 +68,8 @@ Medium priority
 
 2. As a user I want to see how much horsepower the car has, so that I might know how powerful it is.
 
+3. As a user I want to have a search filterable option, so that I can search through the list more easily.
+
 Low priority
 
 1.	As a user, I want to have an option to get to the car brand’s official website, so that I can see their new models as well.
