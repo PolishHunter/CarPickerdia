@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="casual_button" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">135dp</item>
+        <item name="android:layout_height">135dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="drawableTint">@color/blue_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="backgroundTint">@color/usual_color</item>
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+
+    <style name="sign_in_button" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+    <style name="text_border" parent="TextAppearance.AppCompat">
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/blue_500</item>
+    </style>
+
+    <style name="header1" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/grey_main</item>
+    </style>
+
+    <style name="header2" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/grey_main</item>
+    </style>
+
+    <style name="header3" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">310dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/blue_400</item>
+        >
+    </style>
+
+    <style name="header4" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">310dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/grey_hint</item>
+    </style>
+
+    <style name="expert_button" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">135dp</item>
+        <item name="android:layout_height">135dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="drawableTint">@color/blue_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="backgroundTint">@color/expert_color</item>
+    </style>
+
+    <style name="form_input_information" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:background">@drawable/input_only_borders</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey_hint</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif-black</item>
+    </style>
+
+</resources>

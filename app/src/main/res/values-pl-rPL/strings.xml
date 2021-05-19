@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_search_car">Jaką markę samochodową chcesz zobaczć?</string>
+    <string name="input_info_question_suggest">A może coś sportowego?</string>
+    <string name="input_button_random_pick">Losowy wybór\n</string>
+    <string name="input_suggest_button">Zasugeruj</string>
+    <string name="input_confirm_button">Potwierdź</string>
+    <string name="button_try_again">Spróbuj jeszcze raz</string>
+    <string name="button_rating">Potwierdź</string>
+    <string name="input_note_rating">Pozostaw komentarz</string>
+    <string name="input_text_rating">Oceń swoje sugestie</string>
+    <string name="button_main_view_expert">Ekspert</string>
+    <string name="button_main_view_casual">Normalny</string>
+    <string name="nav_item_home_page">Strona główna</string>
+    <string name="nav_item_car_picker">Losowanie auta</string>
+    <string name="nav_item_logout">Wyloguj</string>
+    <string name="nav_item_slider_saved_results">Zapisane rezultaty</string>
+    <string name="nav_item_slider_saved_locations">Zapisane lokacje</string>
+    <string name="nav_item_slider_ratings">Oceny</string>
+    <string name="text_main_view_subtitle">Odnajdź swoje auto marzeń</string>
+    <string name="sign_in_title">Zaloguj się</string>
+    <string name="sign_up_title">Zarejestruj się</string>
+    <string name="nav_item_brand_list">Lista marek samochodowych</string>
+    <string name="nav_item_slider_switch_map">Mapa</string>
+    <string name="text_specific_model_description">Model</string>
+    <string name="text_specific_performance_description">Osiągi</string>
+    <string name="text_specific_brand_description">Marka</string>
+</resources>

@@ -7,4 +7,41 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //blue shades
+
+    <color name="blue_100">#D0EFFF</color> // black font
+    <color name="blue_200">#2A9DF4</color> // black font
+    <color name="blue_300">#187BCD</color> // white font
+    <color name="blue_400">#1167B1</color> // white font
+    <color name="blue_500">#03254C</color> // white font
+
+    //warnings
+
+    <color name="warning_light">#FFBB33</color>
+    <color name="warning_dark">#FF8800</color>
+
+    //emphasize
+
+    <color name="emphasize_green">#52B788</color>
+
+    //randomize
+
+    <color name="randomize_red">#E87451</color>
+
+    //usual
+
+    <color name="usual_color">#8BE78B</color>
+
+    //expert
+
+    <color name="expert_color">#FFF157</color>
+
+    //main
+    <color name="grey_main">#353A41</color>
+
+    //hint
+    <color name="grey_hint">#6A7481</color>
+    <color name="grey_light">#C0C2CE</color>
+
 </resources>

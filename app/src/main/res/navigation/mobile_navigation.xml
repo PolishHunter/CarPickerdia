@@ -3,23 +3,130 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_login_view">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.carpickerdia.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_main_view"
+        android:name="com.example.carpickerdia.views.mainapp.MainViewFragment"
+        tools:layout="@layout/fragment_main_view" >
+        <action
+            android:id="@+id/action_nav_main_view_to_nav_info"
+            app:destination="@id/nav_info" />
+        <action
+            android:id="@+id/action_nav_main_view_to_nav_expert_all_brands"
+            app:destination="@id/nav_expert_all_brands" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.carpickerdia.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_info"
+        android:name="com.example.carpickerdia.views.casual.InfoFragment"
+        tools:layout="@layout/fragment_information" >
+        <action
+            android:id="@+id/action_nav_info_to_nav_results"
+            app:destination="@id/nav_results" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.carpickerdia.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_expert_all_brands"
+        android:name="com.example.carpickerdia.views.expert.ExpertAllBrandsFragment"
+        tools:layout="@layout/fragment_expert_all_brands"
+         >
+        <action
+            android:id="@+id/action_nav_expert_all_brands_to_nav_nearest_dealership_map2"
+            app:destination="@id/nav_nearest_dealership_map" />
+        <action
+            android:id="@+id/action_nav_expert_all_brands_to_nav_expert_all_models"
+            app:destination="@id/nav_expert_all_models" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_expert_cheapest"
+        tools:layout="@layout/fragment_expert_cheapest"
+        >
+        <action
+            android:id="@+id/action_nav_expert_cheapest_to_placeholder2"
+            app:destination="@id/nav_expert_specific_model" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_expert_expensive"
+        tools:layout="@layout/fragment_expert_most_expensive"
+        >
+        <action
+            android:id="@+id/action_nav_expert_expensive_to_placeholder2"
+            app:destination="@id/nav_expert_specific_model" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_expert_reliable"
+        tools:layout="@layout/fragment_expert_most_reliable"
+        >
+        <action
+            android:id="@+id/action_nav_expert_reliable_to_placeholder2"
+            app:destination="@id/nav_expert_specific_model" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_overlay"
+        android:name="com.example.carpickerdia.views.casual.OverlayFragment"
+        tools:layout="@layout/fragment_overlay"
+        >
+        <action
+            android:id="@+id/action_nav_overlay_to_nav_info"
+            app:destination="@id/nav_info" />
+        <action
+            android:id="@+id/action_nav_overlay_to_nav_results"
+            app:destination="@id/nav_results" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_results"
+        android:name="com.example.carpickerdia.views.casual.ResultsFragment"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_nav_results_to_nav_overlay"
+            app:destination="@id/nav_overlay" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_nearest_dealership_map"
+        tools:layout="@layout/fragment_map_nearest_dealerships"
+        >
+        <action
+            android:id="@+id/action_nav_nearest_dealership_map_to_nav_expert_all_brands"
+            app:destination="@id/nav_expert_all_brands" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_login_view"
+        android:name="com.example.carpickerdia.views.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_nav_login_view_to_nav_main_view"
+            app:destination="@id/nav_main_view" />
+    </fragment>
+
+    <fragment android:id="@+id/nav_expert_all_models"
+        android:name="com.example.carpickerdia.views.expert.ExpertAllModelsFragment"
+        tools:layout="@layout/fragment_expert_all_models">
+        <action
+            android:id="@+id/action_nav_expert_all_models_to_nav_expert_expensive"
+            app:destination="@id/nav_expert_expensive" />
+        <action
+            android:id="@+id/action_nav_expert_all_models_to_nav_expert_reliable"
+            app:destination="@id/nav_expert_reliable" />
+        <action
+            android:id="@+id/action_nav_expert_all_models_to_nav_expert_cheapest"
+            app:destination="@id/nav_expert_cheapest" />
+        <action
+            android:id="@+id/action_nav_expert_all_models_to_nav_expert_specific_model"
+            app:destination="@id/nav_expert_specific_model" />
+    </fragment>
+    <fragment android:id="@+id/nav_expert_specific_model"
+        tools:layout="@layout/fragment_expert_specific_model">
+        <action
+            android:id="@+id/action_nav_expert_specific_model_to_nav_expert_all_models"
+            app:destination="@id/nav_expert_all_models" />
+    </fragment>
 </navigation>

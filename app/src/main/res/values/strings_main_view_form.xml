@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="automobile" translatable="false" />
+    <string name="button_main_view_casual">Casual</string>
+    <string name="button_main_view_expert">Expert</string>
+    <string name="text_main_view_title" translatable="false">CarPickerdia</string>
+    <string name="text_main_view_subtitle">Find out your dream cars</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">CarPickerdia</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Carpickerdia</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="main_drawer_results" translatable="false">Saved Results</string>
+    <string name="saved_locations_drawer" translatable="false">Saved Locations</string>
+    <string name="rating_drawer" translatable="false">Rating</string>
+    <string name="map_drawer" translatable="false">Map</string>
+
+    <string name="nav_item_car_picker" translatable="false">Car Picker</string>
+    <string name="nav_item_brand_list" translatable="false">All Brands</string>
+    <string name="nav_item_logout" translatable="false">Logout</string>
+</resources>

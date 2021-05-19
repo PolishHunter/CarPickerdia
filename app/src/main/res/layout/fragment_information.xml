@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_100"
+    tools:context=".views.casual.InfoFragment">
+
+
+    <EditText
+        android:id="@+id/text_info"
+        style="@style/form_input_information"
+        android:layout_marginTop="32dp"
+        android:autofillHints="Maybe something sporty?"
+        android:hint="@string/input_search_car"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_info_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:backgroundTint="@color/blue_400"
+        android:text="@string/input_confirm_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_random_pick_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toEndOf="@+id/button_info_suggest"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_info_car_suggest"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <Button
+        android:id="@+id/button_info_suggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:backgroundTint="@color/warning_light"
+        android:text="@string/input_suggest_button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/button_random_pick_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_info_car_suggest"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/text_info_suggest_display"
+        style="@style/header3"
+        android:layout_marginTop="52dp"
+        android:text="@string/input_info_question_suggest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_info" />
+
+    <ImageView
+        android:id="@+id/image_view_info_car_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:background="@color/blue_200"
+        android:contentDescription="@string/input_info_image"
+        app:layout_constraintBottom_toTopOf="@+id/button_random_pick_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_suggest_display"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <Button
+        android:id="@+id/button_random_pick_info"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/randomize_red"
+        android:text="@string/input_button_random_pick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

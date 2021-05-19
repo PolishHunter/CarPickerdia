@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_confirm_button">Confirm</string>
+    <string name="input_suggest_button">Suggest</string>
+    <string name="input_search_car">Insert a car make here</string>
+    <string name="input_info_image" translatable="false" />
+    <string name="input_info_question_suggest">What about something sporty?</string>
+    <string name="input_button_random_pick">Random pick</string>
+</resources>

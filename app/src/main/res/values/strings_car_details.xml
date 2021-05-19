@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="row_details_text_brand" translatable="false">Brand</string>
+    <string name="row_details_text_model" translatable="false">Model</string>
+    <string name="row_details_text_performance" translatable="false">Performance</string>
+    <string name="row_car_details_image" translatable="false" />
+</resources>

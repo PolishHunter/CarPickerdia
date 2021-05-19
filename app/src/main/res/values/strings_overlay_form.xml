@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_text_rating">Rate your suggestions</string>
+    <string name="input_note_rating">Leave your thoughts here</string>
+    <string name="button_rating">Confirm</string>
+    <string name="button_try_again">Try Again</string>
+</resources>

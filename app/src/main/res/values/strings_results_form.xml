@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="car_one" translatable="false">Car One</string>
+    <string name="car_two" translatable="false">Car Two</string>
+    <string name="car_three" translatable="false">Car Three</string>
+    <string name="car_four" translatable="false">Car Four</string>
+    <string name="sign_in_title">Sign In</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="image_results_one" translatable="false" />
+    <string name="image_results_two" translatable="false" />
+    <string name="image_results_three" translatable="false" />
+    <string name="image_results_four" translatable="false" />
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_100">
+
+    <View
+        android:id="@+id/home_view"
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:background="@color/blue_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/car_main_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/automobile"
+        app:layout_constraintBottom_toTopOf="@+id/underline_main_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_view_title"
+        app:layout_constraintVertical_bias="0.0"
+        android:src="@drawable/automobile" />
+
+    <TextView
+        android:id="@+id/main_view_title"
+        style="@style/header1"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/header_emphasize"
+        android:text="@string/text_main_view_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_view_subtitle"
+        style="@style/header2"
+        android:text="@string/text_main_view_subtitle"
+        app:layout_constraintBottom_toTopOf="@+id/home_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_view_title"
+        app:layout_constraintVertical_bias="0.793" />
+
+    <Button
+        android:id="@+id/main_fragment_button_usual"
+        style="@style/casual_button"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/rounded_button"
+        android:drawableTop="@drawable/ic_baseline_casual_24"
+        android:gravity="center"
+        android:text="@string/button_main_view_casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_fragment_button_expert"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_view"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <Button
+        android:id="@+id/main_fragment_button_expert"
+        style="@style/expert_button"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rounded_button"
+        android:drawableTop="@drawable/ic_baseline_expert_24"
+        android:gravity="center"
+        android:text="@string/button_main_view_expert"
+        app:layout_constraintBottom_toBottomOf="@+id/home_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_view"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <View
+        android:id="@+id/underline_main_view"
+        style="@style/text_border"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="110dp"
+        app:layout_constraintBottom_toTopOf="@+id/home_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_view_subtitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
