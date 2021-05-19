@@ -5,4 +5,5 @@
     <string name="button_main_view_expert">Expert</string>
     <string name="text_main_view_title" translatable="false">CarPickerdia</string>
     <string name="text_main_view_subtitle">Find out your dream cars</string>
+    <string name="main_view_map" translatable="false" />
 </resources>
