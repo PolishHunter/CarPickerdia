@@ -1,23 +1,23 @@
 # CarPickerdia
 
-General description
+<h2>General description</h2>
 
 Struggling with choosing your first car? Don’t know what car should be bought next? No time to search for car opinions nor asking others? Thanks to the newest Carpickerdia app, people will be able to see which the most suitable option is based on their demands. The best 4 proposals are going to be displayed marking the best one with the green color and check icon (for the color blind). 
 
-Background description
+<h2>Background description</h2>
 
 Currently, a lot of people at the different age are hesitating which car they should afford according to their own needs. For most of them it does not matter what age they are or whether they are searching for the first or next car. There is also plenty of people who do not know anything about cars, being tired of searching for different opinions and any suggestions from others.  
 
-<h1>Problem statement</h1>
+<h2>Problem statement</h2>
 
 Since, many people are hesitating for which car they should go for, a car picking app will help them to get the best possible displayed according to their needs.
 
 
-Definition of purpose
+<h2>Definition of purpose</h2>
 
 The purpose is to make a car picking application that will be displaying the best possible car options according to the user’s needs based on the different expert opinions, origin, the ratio between quality of materials and price in order to allow the users to buy the right one in the future that will satisfy them enough.
 
-Delimitation
+<h2>Delimitation</h2>
 
 -	Mobile version for Android only,
 -	No payment options,
@@ -28,7 +28,7 @@ Delimitation
 -	It is rather an electronic encyclopedia than online shop.
 
 
-Requirements
+<h2>Requirements</h2>
 
 
 High priority
