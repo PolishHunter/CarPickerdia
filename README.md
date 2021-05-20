@@ -27,6 +27,7 @@ The purpose is to make a car picking application that will be displaying the bes
 -	No filtering through the country,
 -	It is rather an electronic encyclopedia than online shop.
 -	Internet connection is required
+-	
 
 
 <h2>Requirements</h2>
@@ -72,7 +73,7 @@ The purpose is to make a car picking application that will be displaying the bes
 
 3. As a user, I want to see a country where the certain vehicle was manufactured.
 
-<h3>Low priority</h3>
+<h3>Low priority (not in this release)</h3>
 
 1.	As a user, I want to have an option to get to the car brand’s official website, so that I can see their new models as well.
 
@@ -81,3 +82,5 @@ The purpose is to make a car picking application that will be displaying the bes
 3. As a user, I want to have an option to download the picture of the car, so that I can search for it through Google Graphics.
 
 4. As a user, I want to have a directory where I could store all the car proposals previously done, so that I can go back and compare with the other results.
+
+5. As a user, I want to have a link for each brand, so that I might visit the offical website.
