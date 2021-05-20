@@ -28,8 +28,8 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
 
     private HomeAppActivityViewModel viewModel;
     private NavigationView navigationView;
-
-    private View view;
+    private NavController navController;
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,22 +42,32 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_item_car_picker: {
-                Navigation.findNavController(view).navigate(R.id.action_nav_main_view_to_nav_info);
+                navController.navigate(R.id.action_nav_main_view_to_nav_info);
+                drawerLayout.close();
+                break;
             }
             case R.id.nav_item_brand_list: {
-                Navigation.findNavController(view).navigate(R.id.action_nav_main_view_to_nav_expert_all_brands);
+                viewModel.getAllBrands();
+                navController.navigate(R.id.action_nav_main_view_to_nav_expert_all_brands);
+                drawerLayout.close();
+                break;
+            }
+            case R.id.nav_item_map: {
+                navController.navigate(R.id.action_nav_main_view_to_nav_map_fragment);
+                drawerLayout.close();
+                break;
+            }
+            case R.id.nav_item_feedback: {
+                navController.navigate(R.id.action_nav_main_view_to_settingsFragment);
+                drawerLayout.close();
+                break;
             }
             case R.id.nav_item_logout: {
                 viewModel.signOut();
+                break;
             }
         }
         return true;
@@ -75,8 +85,8 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
 
     private void prepareToolbar() {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_fragment_main);
-        NavController navController = navHostFragment.getNavController();
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        navController = navHostFragment.getNavController();
+        drawerLayout = findViewById(R.id.drawer_layout);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).setOpenableLayout(drawerLayout).build();
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
@@ -93,11 +103,11 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
 
     private void setNavigationHeader() {
         View navHeader = navigationView.getHeaderView(0);
-        ImageView avatar = navHeader.findViewById(R.id.image_avatar);
-        TextView userName = navHeader.findViewById(R.id.text_nickname);
-        TextView userEmail = navHeader.findViewById(R.id.text_email);
+        ImageView avatar = navHeader.findViewById(R.id.img_nav_header);
+        TextView userName = navHeader.findViewById(R.id.text_nav_header_name);
+        TextView userEmail = navHeader.findViewById(R.id.text_nav_header_email);
 
-        viewModel.getCurrentUser().observe(this, user -> {
+       viewModel.getCurrentUser().observe(this, user -> {
             if(user != null){
                 userName.setText(user.getDisplayName());
                 userEmail.setText(user.getEmail());

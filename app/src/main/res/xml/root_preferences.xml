@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <Preference
+        android:icon="@drawable/ic_baseline_feedback_24"
+        app:key="feedback"
+        app:title="@string/feedback_title"
+        app:summary="@string/feedback_description">
+        <intent
+            android:action="android.intent.action.SEND"
+            android:data="o.szeferpldk@gmail.com"
+            android:mimeType="text/email">
+            <extra
+                android:name="android.intent.extra.EMAIL"
+                android:value="mailto@email.com"/>
+            <extra
+                android:name="android.intent.extra.SUBJECT"
+                android:value="@string/feedback"/>
+            <extra
+                android:name="android.intent.extra.TEXT"
+                android:value="@string/feedback_mail_text"/>
+        </intent>
+    </Preference>
+
+</PreferenceScreen>

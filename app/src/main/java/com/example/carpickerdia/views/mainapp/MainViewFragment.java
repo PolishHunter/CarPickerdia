@@ -19,7 +19,6 @@ public class MainViewFragment extends Fragment {
 
     private Button buttonCasual;
     private Button buttonExpert;
-    private Button buttonMap;
 
     private MainViewModel viewModel;
 
@@ -39,7 +38,6 @@ public class MainViewFragment extends Fragment {
     private void prepareUI() {
         buttonCasual = view.findViewById(R.id.main_fragment_button_usual);
         buttonExpert = view.findViewById(R.id.main_fragment_button_expert);
-        buttonMap = view.findViewById(R.id.button_map);
     }
 
     private void prepareOnClickEvents() {
@@ -48,6 +46,5 @@ public class MainViewFragment extends Fragment {
             viewModel.getAllBrands();
             Navigation.findNavController(view).navigate(R.id.action_nav_main_view_to_nav_expert_all_brands);
         });
-        buttonMap.setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.action_nav_main_view_to_nav_map_fragment));
     }
 }

@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_nav_main_view_to_nav_map_fragment"
             app:destination="@id/nav_map_fragment" />
+        <action
+            android:id="@+id/action_nav_main_view_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
     <fragment
@@ -116,4 +119,7 @@
         android:id="@+id/nav_map_fragment"
         android:name="com.example.carpickerdia.views.mainapp.MapFragment"
         tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.carpickerdia.views.mainapp.SettingsFragment" />
 </navigation>
