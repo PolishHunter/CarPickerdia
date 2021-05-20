@@ -83,3 +83,5 @@ The purpose is to make a car picking application that will be displaying the bes
 4. As a user, I want to have a directory where I could store all the car proposals previously done, so that I can go back and compare with the other results.
 
 5. As a user, I want to have a link for each brand, so that I might visit the offical website.
+
+6. As a user, I want to enter a car brand with the conversion in, so that I do not need to type mercedes-benz or rolls-royce, (just rolls or mercedes).
