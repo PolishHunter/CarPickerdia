@@ -26,13 +26,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_view_title"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintTop_toBottomOf="@+id/main_view_title" />
 
     <TextView
         android:id="@+id/main_view_title"
         style="@style/header1"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/header_emphasize"
         android:text="@string/text_main_view_title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_view_title"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <Button
         android:id="@+id/main_fragment_button_usual"
