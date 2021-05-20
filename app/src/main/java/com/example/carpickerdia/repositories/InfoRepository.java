@@ -25,6 +25,7 @@ public class InfoRepository {
     private final MutableLiveData<List<Car>> expensiveCars;
     private final MutableLiveData<List<String>> allBrands;
     private final MutableLiveData<List<String>> allModels;
+    private final MutableLiveData<Car> currentCar;
     private List<Car> cheapestCarList;
     private List<Car> reliableCarList;
     private List<Car> expensiveCarList;
@@ -37,6 +38,7 @@ public class InfoRepository {
         expensiveCars = new MutableLiveData<>();
         allBrands = new MutableLiveData<>();
         allModels = new MutableLiveData<>();
+        currentCar = new MutableLiveData<>();
     }
 
     public static synchronized InfoRepository getInstance() {
@@ -44,6 +46,10 @@ public class InfoRepository {
             instance = new InfoRepository();
         }
         return instance;
+    }
+
+    public LiveData<Car> getCurrentCarByModel(){
+        return currentCar;
     }
 
     public LiveData<List<String>> getAllBrands() {
@@ -151,6 +157,32 @@ public class InfoRepository {
                         }
                     }
                     allBrands.setValue(brands);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<CarResponse>> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void getCarByModel(String model){
+        CarApi carApi = ServiceGenerator.getCarApi();
+        Call<List<CarResponse>> call = carApi.getCar();
+        call.enqueue(new Callback<List<CarResponse>>() {
+
+            @Override
+            public void onResponse(Call<List<CarResponse>> call, Response<List<CarResponse>> response) {
+                if (response.isSuccessful()) {
+                    List<CarResponse> carResponse = response.body();
+
+                    for(CarResponse car: carResponse) {
+                        if(model.equals(car.getCar().getModel())) {
+                           currentCar.setValue(car.getCar());
+                           break;
+                        }
+                    }
                 }
             }
 

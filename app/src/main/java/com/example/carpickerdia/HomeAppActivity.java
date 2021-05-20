@@ -2,6 +2,7 @@ package com.example.carpickerdia;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,13 +20,13 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.bumptech.glide.Glide;
-import com.example.carpickerdia.viewmodels.mainapp.LoginViewModel;
+import com.example.carpickerdia.viewmodels.HomeAppActivityViewModel;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeAppActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private LoginViewModel viewModel;
+    private HomeAppActivityViewModel viewModel;
     private NavigationView navigationView;
 
     private View view;
@@ -33,11 +34,17 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        viewModel = new ViewModelProvider(this).get(HomeAppActivityViewModel.class);
+        checkIfSignedIn();
         setContentView(R.layout.activity_home_app);
         prepareToolbar();
         setNavigationViewListener();
-        checkIfSignedIn();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override
@@ -56,6 +63,16 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
         return true;
     }
 
+    private void checkIfSignedIn() {
+        viewModel.getCurrentUser().observe(this, user -> {
+            if (user != null) {
+                setNavigationHeader();
+            } else {
+                startActivity(new Intent(this, LoginActivity.class));
+            }
+        });
+    }
+
     private void prepareToolbar() {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_fragment_main);
         NavController navController = navHostFragment.getNavController();
@@ -67,16 +84,6 @@ public class HomeAppActivity extends AppCompatActivity implements NavigationView
         getSupportActionBar().setTitle(null);
 
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
-    }
-
-    private void checkIfSignedIn() {
-        viewModel.getCurrentUser().observe(this, user -> {
-            if (user != null) {
-                setNavigationHeader();
-            } else {
-                startActivity(new Intent(this, LoginViewModel.class));
-            }
-        });
     }
 
     private void setNavigationViewListener() {

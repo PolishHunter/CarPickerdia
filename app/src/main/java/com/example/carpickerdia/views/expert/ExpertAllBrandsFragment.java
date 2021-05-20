@@ -51,9 +51,8 @@ public class ExpertAllBrandsFragment extends Fragment implements CarAdapterBrand
 
     @Override
     public void onListItemClick(int brandId) {
-        Bundle bundle = new Bundle();
-        bundle.putString(adapter.getBrand(brandId), "");
-        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_brands_to_nav_expert_all_models, bundle);
+        viewModel.getAllCarModels(adapter.getBrand(brandId));
+        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_brands_to_nav_expert_all_models);
     }
 
 //    public boolean onCreateOptionsMenu(Menu menu) {

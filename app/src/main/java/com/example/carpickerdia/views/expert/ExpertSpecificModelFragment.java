@@ -33,6 +33,7 @@ public class ExpertSpecificModelFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_expert_specific_model, container, false);
         viewModel = new ViewModelProvider(this).get(SpecificCarViewModel.class);
         prepareUI();
+        loadData();
         return view;
     }
 
@@ -43,8 +44,14 @@ public class ExpertSpecificModelFragment extends Fragment {
        imageView = view.findViewById(R.id.image_specific_car);
     }
 
-    private void prepareOnClickEvents(){
-
+    private void loadData(){
+        viewModel.getCurrentCarByModel().observe(getViewLifecycleOwner(), car -> {
+            loadCarImage(car.getModel());
+            textMake.setText(car.getMake());
+            textModel.setText(car.getModel());
+            String performance = "Year: " + car.getYear() + "\n" + "Horsepower: " + car.getHorsepower() + "\n" + "Price: " + car.getPrice();
+            textPerformance.setText(performance);
+        });
     }
 
     private void loadCarImage(String model) {

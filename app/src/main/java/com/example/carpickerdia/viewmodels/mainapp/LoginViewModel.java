@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginViewModel extends AndroidViewModel {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public LoginViewModel(Application application) {
         super(application);
@@ -21,14 +21,5 @@ public class LoginViewModel extends AndroidViewModel {
 
     public LiveData<FirebaseUser> getCurrentUser() {
         return userRepository.getCurrentUser();
-    }
-
-    public UserStatusLiveData getStatus(){
-        String userId = userRepository.getCurrentUser().getValue().getUid();
-        return userRepository.getStatus(userId);
-    }
-
-    public void signOut() {
-        userRepository.signOut();
     }
 }

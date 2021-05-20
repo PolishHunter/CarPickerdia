@@ -34,7 +34,7 @@
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">32sp</item>
-        <item name="android:letterSpacing">0.10</item>
+        <item name="android:letterSpacing">0.07</item>
         <item name="android:gravity">center</item>
         <item name="fontFamily">sans-serif-black</item>
         <item name="android:textColor">@color/grey_main</item>
@@ -43,7 +43,7 @@
     <style name="header2" parent="TextAppearance.AppCompat">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:letterSpacing">0.07</item>
         <item name="android:gravity">center</item>
         <item name="textAllCaps">true</item>

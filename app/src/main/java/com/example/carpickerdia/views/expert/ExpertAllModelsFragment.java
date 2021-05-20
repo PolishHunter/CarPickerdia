@@ -54,9 +54,8 @@ public class ExpertAllModelsFragment extends Fragment implements CarAdapterModel
 
     @Override
     public void onListItemClick(int modelId) {
-        Bundle bundle = new Bundle();
-        bundle.putString(adapter.getModel(modelId), "");
-        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_models_to_nav_expert_specific_model, bundle);
+        viewModel.getCarByModel(adapter.getModel(modelId));
+        Navigation.findNavController(view).navigate(R.id.action_nav_expert_all_models_to_nav_expert_specific_model);
     }
 
 //    public boolean onCreateOptionsMenu(Menu menu) {

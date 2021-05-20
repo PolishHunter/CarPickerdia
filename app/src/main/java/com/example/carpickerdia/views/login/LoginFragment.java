@@ -27,7 +27,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class LoginFragment extends Fragment {
 
-    private final int RC_SIGN_IN = 30;
+    private final int RC_SIGN_IN = 1;
     private LoginViewModel viewModel;
     private SignInButton loginButton;
     private View view;
@@ -53,6 +53,14 @@ public class LoginFragment extends Fragment {
         }
     }
 
+    private void checkIfSignedIn(){
+        viewModel.getCurrentUser().observe(getViewLifecycleOwner(), firebaseUser -> {
+            if(firebaseUser != null){
+                getActivity().startActivity(new Intent(getActivity(), HomeAppActivity.class));
+            }
+        });
+    }
+
     private void prepareUI(){
         loginButton = view.findViewById(R.id.button_google_sign_in);
     }
@@ -60,14 +68,6 @@ public class LoginFragment extends Fragment {
     private void prepareOnClickActions() {
         loginButton.setOnClickListener(v-> {
             signIn();
-        });
-    }
-
-    private void checkIfSignedIn(){
-        viewModel.getCurrentUser().observe(getViewLifecycleOwner(), user -> {
-            if(user != null){
-                Navigation.findNavController(view).navigate(R.id.action_nav_login_view_to_nav_main_view);
-            }
         });
     }
 
@@ -79,6 +79,7 @@ public class LoginFragment extends Fragment {
         Intent signInIntent = AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setAvailableProviders(providers)
+                .setIsSmartLockEnabled(false)
                 .build();
 
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -86,13 +87,7 @@ public class LoginFragment extends Fragment {
 
     private void handleSignInRequest(int resultCode){
         if(resultCode == RESULT_OK) {
-            viewModel.getStatus().observe(getActivity(), status -> {
-                if(status != null && status){
-                    Intent intent = new Intent(getContext(), HomeAppActivity.class);
-                    getContext().startActivity(intent);
-                }
-            });
-
+            getActivity().startActivity(new Intent(getActivity(), HomeAppActivity.class));
         }
         else{
             Toasty.error(getContext(), "Invalid data", Toasty.LENGTH_SHORT).show();

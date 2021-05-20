@@ -15,7 +15,6 @@ public class UserRepository {
      private final Application application;
      private final UserLiveData currentUser;
      private static UserRepository instance;
-     private DatabaseReference myRef;
 
 
      private UserRepository(Application application){
@@ -28,16 +27,6 @@ public class UserRepository {
                instance = new UserRepository(application);
           }
           return instance;
-     }
-
-     public void createUser(String uid, boolean isCar){
-          myRef = FirebaseDatabase.getInstance().getReference().child("users").child(uid);
-          myRef.setValue(isCar);
-     }
-
-     public UserStatusLiveData getStatus(String uid){
-          myRef = FirebaseDatabase.getInstance().getReference("users");
-          return new UserStatusLiveData(myRef, uid);
      }
 
      public LiveData<FirebaseUser> getCurrentUser() {

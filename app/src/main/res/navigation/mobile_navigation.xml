@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_login_view">
+    app:startDestination="@id/nav_main_view">
 
     <fragment
         android:id="@+id/nav_main_view"
@@ -89,16 +89,6 @@
             app:destination="@id/nav_overlay" />
     </fragment>
 
-    <fragment
-        android:id="@+id/nav_login_view"
-        android:name="com.example.carpickerdia.views.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_nav_login_view_to_nav_main_view"
-            app:destination="@id/nav_main_view" />
-    </fragment>
-
     <fragment android:id="@+id/nav_expert_all_models"
         android:name="com.example.carpickerdia.views.expert.ExpertAllModelsFragment"
         tools:layout="@layout/fragment_expert_all_models">
@@ -116,7 +106,8 @@
             app:destination="@id/nav_expert_specific_model" />
     </fragment>
     <fragment android:id="@+id/nav_expert_specific_model"
-        tools:layout="@layout/fragment_expert_specific_model">
+        tools:layout="@layout/fragment_expert_specific_model"
+        android:name="com.example.carpickerdia.views.expert.ExpertSpecificModelFragment">
         <action
             android:id="@+id/action_nav_expert_specific_model_to_nav_expert_all_models"
             app:destination="@id/nav_expert_all_models" />
@@ -124,6 +115,5 @@
     <fragment
         android:id="@+id/nav_map_fragment"
         android:name="com.example.carpickerdia.views.mainapp.MapFragment"
-        android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
 </navigation>
