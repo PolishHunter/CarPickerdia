@@ -27,7 +27,6 @@ The purpose is to make a car picking application that will be displaying the bes
 -	No filtering through the country,
 -	It is rather an electronic encyclopedia than online shop.
 -	Internet connection is required
--	
 
 
 <h2>Requirements</h2>
