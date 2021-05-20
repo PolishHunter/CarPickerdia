@@ -1,5 +1,8 @@
 # CarPickerdia
 
+<h2>Link to the video - https://www.youtube.com/watch?v=unAbwL9yJiw
+  All of the planned requirements have been implemented succesfully.</h2>
+
 <h2>General description</h2>
 
 Struggling with choosing your first car? Don’t know what car should be bought next? No time to search for car opinions nor asking others? Thanks to the newest Carpickerdia app, people will be able to see which the most suitable option is based on their demands. The best 4 proposals are going to be displayed marking the best one with the green color and check icon (for the color blind). 
