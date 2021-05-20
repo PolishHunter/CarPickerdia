@@ -8,23 +8,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:padding="10dp"
         android:layout_margin="10dp"
         android:background="@drawable/rounded_edit_text"
         android:backgroundTint="@color/blue_300"
-        >
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/image_row_car_brand"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:background="@color/blue_200"
+            android:contentDescription="@string/row_car_image_brand"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/mercedes"
-            android:contentDescription="@string/row_car_image_brand"
-             />
+            tools:src="@drawable/mercedes" />
 
         <TextView
             android:id="@+id/text_row_car_brand"
@@ -38,8 +36,8 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.318"
-            app:layout_constraintStart_toEndOf="@+id/image_row_car_brand"
+            app:layout_constraintHorizontal_bias="0.581"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.509" />
 
