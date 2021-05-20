@@ -15,7 +15,7 @@ Since, many people are hesitating for which car they should go for, a car pickin
 
 <h2>Definition of purpose</h2>
 
-The purpose is to make a car picking application that will be displaying the best possible car options according to the user’s needs based on the different expert opinions, price/quality ratio, horsepower and age to allow the users to buy the right one in the future that will satisfy them enough.
+The purpose is to make a car picking application that will be displaying the best possible car options according to the user’s needs based on the different expert opinions, price/quality ratio, horsepower and age to allow the users to buy the right one that will satisfy them enough.
 
 <h2>Delimitation</h2>
 
