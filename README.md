@@ -74,14 +74,6 @@ The purpose is to make a car picking application that will be displaying the bes
 
 <h3>Low priority (not in this release)</h3>
 
-1.	As a user, I want to have an option to get to the car brand’s official website, so that I can see their new models as well.
+1. As a user, I want to have a link for each brand, so that I might visit the offical website.
 
-2. As a user, I want to fitler the cars, so that I know which ones are cheap, expensive or reliable.
-
-3. As a user, I want to have an option to download the picture of the car, so that I can search for it through Google Graphics.
-
-4. As a user, I want to have a directory where I could store all the car proposals previously done, so that I can go back and compare with the other results.
-
-5. As a user, I want to have a link for each brand, so that I might visit the offical website.
-
-6. As a user, I want to enter a car brand with the conversion in, so that I do not need to type mercedes-benz or rolls-royce, (just rolls or mercedes).
+2. As a user, I want to enter a car brand with the conversion in, so that I do not need to type mercedes-benz or rolls-royce, (just rolls or mercedes).
