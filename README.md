@@ -1,6 +1,6 @@
 # CarPickerdia
 
-<h2>Link to the video - https://www.youtube.com/watch?v=unAbwL9yJiw
+<h2>Link to the video - https://youtu.be/taGf876HD0E
   </br>
   All of the planned requirements have been implemented succesfully.</h2>
 
