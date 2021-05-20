@@ -8,7 +8,7 @@ Background description
 
 Currently, a lot of people at the different age are hesitating which car they should afford according to their own needs. For most of them it does not matter what age they are or whether they are searching for the first or next car. There is also plenty of people who do not know anything about cars, being tired of searching for different opinions and any suggestions from others.  
 
-Problem statement
+<h1>Problem statement</h1>
 
 Since, many people are hesitating for which car they should go for, a car picking app will help them to get the best possible displayed according to their needs.
 
