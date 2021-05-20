@@ -13,9 +13,9 @@
     <string name="rating_drawer" translatable="false">Rating</string>
     <string name="map_drawer" translatable="false">Map</string>
 
-    <string name="nav_item_car_picker" translatable="false">Car Picker</string>
-    <string name="nav_item_brand_list" translatable="false">All Brands</string>
-    <string name="nav_item_feedback" translatable="false">Feedback</string>
-    <string name="nav_item_map" translatable="false">Map</string>
-    <string name="nav_item_logout" translatable="false">Logout</string>
+    <string name="nav_item_car_picker">Car Picker</string>
+    <string name="nav_item_brand_list">All Brands</string>
+    <string name="nav_item_feedback">Feedback</string>
+    <string name="nav_item_map">Map</string>
+    <string name="nav_item_logout">Logout</string>
 </resources>

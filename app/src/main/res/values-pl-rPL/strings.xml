@@ -11,17 +11,21 @@
     <string name="input_text_rating">Oceń swoje sugestie</string>
     <string name="button_main_view_expert">Ekspert</string>
     <string name="button_main_view_casual">Normalny</string>
-    <string name="nav_item_car_picker">Losowanie auta</string>
-    <string name="nav_item_logout">Wyloguj</string>
     <string name="text_main_view_subtitle">Odnajdź swoje auto marzeń</string>
     <string name="sign_in_title">Zaloguj się</string>
     <string name="sign_up_title">Zarejestruj się</string>
-    <string name="nav_item_brand_list">Lista marek samochodowych</string>
-    <string name="text_specific_model_description">Model</string>
-    <string name="text_specific_performance_description">Osiągi</string>
-    <string name="text_specific_brand_description">Marka</string>
     <string name="feedback">Odwołaj się</string>
     <string name="feedback_title">Wyślij odwołanie</string>
     <string name="feedback_description">Zgłoś problemy techniczne lub zasugeruj nowe funkcje</string>
     <string name="feedback_mail_text">Twoje odwołanie</string>
+    <string name="nav_item_car_picker">Auto losowanie</string>
+    <string name="nav_item_brand_list">Wszystkie marki</string>
+    <string name="nav_item_logout">Wyloguj</string>
+    <string name="nav_item_feedback">Odwołanie</string>
+    <string name="nav_item_map">Mapa</string>
+    <string name="text_specific_brand">Marka</string>
+    <string name="text_specific_model">Model</string>
+    <string name="text_specific_year">Rok</string>
+    <string name="text_specific_horsepower">Konie mechaniczne</string>
+    <string name="text_specific_pricetext">Cena</string>
 </resources>

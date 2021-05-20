@@ -12,8 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.carpickerdia.R;
-import com.example.carpickerdia.viewmodels.casual.InfoViewModel;
-import com.example.carpickerdia.viewmodels.casual.ResultsViewModel;
 import com.example.carpickerdia.viewmodels.expert.SpecificCarViewModel;
 
 public class ExpertSpecificModelFragment extends Fragment {
@@ -22,7 +20,9 @@ public class ExpertSpecificModelFragment extends Fragment {
 
     private TextView textMake;
     private TextView textModel;
-    private TextView textPerformance;
+    private TextView textYear;
+    private TextView textHorsepower;
+    private TextView textPrice;
     private ImageView imageView;
 
     private View view;
@@ -40,17 +40,22 @@ public class ExpertSpecificModelFragment extends Fragment {
     private void prepareUI(){
        textMake = view.findViewById(R.id.brand_name_text);
        textModel = view.findViewById(R.id.model_name_text);
-       textPerformance = view.findViewById(R.id.performance_name_text);
+       textYear = view.findViewById(R.id.year_name_text);
+       textHorsepower = view.findViewById(R.id.horsepower_name_text);
+       textPrice = view.findViewById(R.id.price_name_text);
        imageView = view.findViewById(R.id.image_specific_car);
     }
 
     private void loadData(){
         viewModel.getCurrentCarByModel().observe(getViewLifecycleOwner(), car -> {
+            String horsepower = car.getHorsepower() + " " + "HP";
+            String price = car.getPrice() + " " + "$";
             loadCarImage(car.getModel());
             textMake.setText(car.getMake());
             textModel.setText(car.getModel());
-            String performance = "Year: " + car.getYear() + "\n" + "Horsepower: " + car.getHorsepower() + "\n" + "Price: " + car.getPrice();
-            textPerformance.setText(performance);
+            textYear.setText(String.valueOf(car.getYear()));
+            textHorsepower.setText(horsepower);
+            textPrice.setText(price);
         });
     }
 

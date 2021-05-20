@@ -11,14 +11,14 @@
         android:padding="10dp"
         android:layout_margin="10dp"
         android:background="@drawable/rounded_edit_text"
-        android:backgroundTint="@color/blue_300"
+        android:backgroundTint="@color/blue_400"
         >
 
         <ImageView
             android:id="@+id/image_row_car_brand"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:background="@color/blue_100"
+            android:background="@color/blue_200"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,9 +32,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:letterSpacing="0.05"
+            android:letterSpacing="0.03"
             android:text="@string/row_car_brand"
-            android:textColor="@color/white"
+            android:textColor="@color/blue_50"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

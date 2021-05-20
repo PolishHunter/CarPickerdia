@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="text_specific_brand_description">Brand</string>
-    <string name="text_specific_model_description">Model</string>
-    <string name="text_specific_performance_description">Performance</string>
+    <!--Insert into views that do not change-->
+    <string name="text_specific_brand">Brand</string>
+    <string name="text_specific_model">Model</string>
+    <string name="text_specific_year">Year</string>
+    <string name="text_specific_horsepower">Horsepower</string>
+    <string name="text_specific_pricetext">Price</string>
+
+    <!--Insert into views that do change-->
+    <string name="text_specific_brand_description" translatable="false">BrandDescription</string>
+    <string name="text_specific_model_description" translatable="false">ModelDescription</string>
+    <string name="text_specific_year_description" translatable="false">YearDescription</string>
+    <string name="text_specific_horsepower_description" translatable="false">HorsepowerDescription</string>
+    <string name="text_specific_price_description" translatable="false">PriceDescription</string>
+
     <string name="image_specific_model" translatable="false" />
-
-    <string name="text_specific_brand" translatable="false">Brand Text</string>
-    <string name="text_specific_model" translatable="false">Model Text</string>
-    <string name="text_specific_performance" translatable="false">Performance Text</string>
-
-
-
 
 </resources>

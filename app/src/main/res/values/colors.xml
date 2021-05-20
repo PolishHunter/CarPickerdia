@@ -10,15 +10,20 @@
 
     //blue shades
 
-    <color name="blue_100">#D0EFFF</color> // black font
-    <color name="blue_200">#2A9DF4</color> // black font
-    <color name="blue_300">#187BCD</color> // white font
-    <color name="blue_400">#1167B1</color> // white font
-    <color name="blue_500">#03254C</color> // white font
+    <color name="blue_50">#E1F5FE</color>
+    <color name="blue_100">#B3E5FC</color>
+    <color name="blue_200">#81D4FA</color>
+    <color name="blue_300">#4FC3F7</color>
+    <color name="blue_400">#29B6F6</color>
+    <color name="blue_500">#03A9F4</color>
+    <color name="blue_600">#039BE5</color>
+    <color name="blue_700">#0288D1</color>
+    <color name="blue_800">#0277BD</color>
+    <color name="blue_900">#01579B</color>
 
     //warnings
 
-    <color name="warning_light">#FFBB33</color>
+    <color name="warning_light">#FFFAA0</color>
     <color name="warning_dark">#FF8800</color>
 
     //emphasize

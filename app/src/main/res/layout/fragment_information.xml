@@ -11,12 +11,11 @@
     <EditText
         android:id="@+id/text_info"
         style="@style/form_input_information"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:autofillHints="Maybe something sporty?"
         android:hint="@string/input_search_car"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,9 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="56dp"
-        android:backgroundTint="@color/blue_400"
+        android:backgroundTint="@color/blue_600"
         android:text="@string/input_confirm_button"
-        android:textColor="@color/white"
+        android:textColor="@color/blue_50"
         app:layout_constraintBottom_toTopOf="@+id/button_random_pick_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.979"
@@ -42,7 +41,7 @@
         android:layout_marginStart="56dp"
         android:backgroundTint="@color/warning_light"
         android:text="@string/input_suggest_button"
-        android:textColor="@color/black"
+        android:textColor="@color/blue_900"
         app:layout_constraintBottom_toTopOf="@+id/button_random_pick_info"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_info_car_suggest"
@@ -51,7 +50,7 @@
     <TextView
         android:id="@+id/text_info_suggest_display"
         style="@style/header3"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:text="@string/input_info_question_suggest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -69,7 +68,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_info_suggest_display"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintVertical_bias="0.263" />
 
     <Button
         android:id="@+id/button_random_pick_info"
@@ -77,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:backgroundTint="@color/randomize_red"
+        android:textColor="@color/blue_50"
         android:text="@string/input_button_random_pick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
