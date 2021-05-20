@@ -31,7 +31,7 @@ The purpose is to make a car picking application that will be displaying the bes
 <h2>Requirements</h2>
 
 
-High priority
+<h3>High priorit</h3>
 
 1.	As a user, I want to be able to see the best possible options based on my personal needs and car type chosen.
 
@@ -63,7 +63,7 @@ High priority
 
 15. As a user, I want to have a photo of each model of the car, so that I can distinguish the difference between them.
 
-Medium priority
+<h3>Medium priority</h3>
 
 1. As a user I want to see how much horsepower the car has, so that I might know how powerful it is.
 
@@ -71,7 +71,7 @@ Medium priority
 
 3. As a user, I want to see a country where the certain vehicle was manufactured.
 
-Low priority
+<h3>Low priority</h3>
 
 1.	As a user, I want to have an option to get to the car brand’s official website, so that I can see their new models as well.
 
