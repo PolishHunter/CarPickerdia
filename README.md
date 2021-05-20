@@ -26,12 +26,13 @@ The purpose is to make a car picking application that will be displaying the bes
 -	Suggestions about the potential cars only, 
 -	No filtering through the country,
 -	It is rather an electronic encyclopedia than online shop.
+-	Internet connection is required
 
 
 <h2>Requirements</h2>
 
 
-<h3>High priorit</h3>
+<h3>High priority</h3>
 
 1.	As a user, I want to be able to see the best possible options based on my personal needs and car type chosen.
 
