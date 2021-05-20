@@ -26,6 +26,7 @@
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:layout_marginTop="72dp"
+        android:background="@color/grey_light"
         android:contentDescription=""
         app:layout_constraintEnd_toEndOf="@+id/expert_view_specific_model"
         app:layout_constraintHorizontal_bias="0.0"

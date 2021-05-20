@@ -31,15 +31,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
+            android:gravity="center"
             android:letterSpacing="0.05"
             android:text="@string/row_car_brand"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintHorizontal_bias="0.318"
             app:layout_constraintStart_toEndOf="@+id/image_row_car_brand"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.509" />
+
+        <ImageView
+            android:id="@+id/image_nationality"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/text_row_car_brand"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/german" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
 
