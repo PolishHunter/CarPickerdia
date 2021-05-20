@@ -1,23 +1,23 @@
 # CarPickerdia
 
-General description
+<h2>General description</h2>
 
 Struggling with choosing your first car? Don’t know what car should be bought next? No time to search for car opinions nor asking others? Thanks to the newest Carpickerdia app, people will be able to see which the most suitable option is based on their demands. The best 4 proposals are going to be displayed marking the best one with the green color and check icon (for the color blind). 
 
-Background description
+<h2>Background description</h2>
 
 Currently, a lot of people at the different age are hesitating which car they should afford according to their own needs. For most of them it does not matter what age they are or whether they are searching for the first or next car. There is also plenty of people who do not know anything about cars, being tired of searching for different opinions and any suggestions from others.  
 
-Problem statement
+<h2>Problem statement</h2>
 
 Since, many people are hesitating for which car they should go for, a car picking app will help them to get the best possible displayed according to their needs.
 
 
-Definition of purpose
+<h2>Definition of purpose</h2>
 
 The purpose is to make a car picking application that will be displaying the best possible car options according to the user’s needs based on the different expert opinions, origin, the ratio between quality of materials and price in order to allow the users to buy the right one in the future that will satisfy them enough.
 
-Delimitation
+<h2>Delimitation</h2>
 
 -	Mobile version for Android only,
 -	No payment options,
@@ -26,12 +26,13 @@ Delimitation
 -	Suggestions about the potential cars only, 
 -	No filtering through the country,
 -	It is rather an electronic encyclopedia than online shop.
+-	Internet connection is required
 
 
-Requirements
+<h2>Requirements</h2>
 
 
-High priority
+<h3>High priority</h3>
 
 1.	As a user, I want to be able to see the best possible options based on my personal needs and car type chosen.
 
@@ -63,15 +64,15 @@ High priority
 
 15. As a user, I want to have a photo of each model of the car, so that I can distinguish the difference between them.
 
-Medium priority
+<h3>Medium priority</h3>
 
-1.	As a user I want to see in which country a certain car was manufactured, so that I might see how old it is.
+1. As a user I want to see how much horsepower the car has, so that I might know how powerful it is.
 
-2. As a user I want to see how much horsepower the car has, so that I might know how powerful it is.
+2. As a user I want to have a search filterable option, so that I can search through the list more easily.
 
-3. As a user I want to have a search filterable option, so that I can search through the list more easily.
+3. As a user, I want to see a country where the certain vehicle was manufactured.
 
-Low priority
+<h3>Low priority (not in this release)</h3>
 
 1.	As a user, I want to have an option to get to the car brand’s official website, so that I can see their new models as well.
 
@@ -81,4 +82,6 @@ Low priority
 
 4. As a user, I want to have a directory where I could store all the car proposals previously done, so that I can go back and compare with the other results.
 
-5. As a user, I want to see a country where the certain vehicle was manufactured.
+5. As a user, I want to have a link for each brand, so that I might visit the offical website.
+
+6. As a user, I want to enter a car brand with the conversion in, so that I do not need to type mercedes-benz or rolls-royce, (just rolls or mercedes).
